@@ -12,7 +12,7 @@ export default function QuakeList (){
     const fetchQuakes = async ()=>{
         try {
             const res=await axios.get("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson")
-            console.log(res.data.features)
+            // console.log(res.data.features)
             setQuakes(res.data.features);
         } catch (error) {
             setError(error)
@@ -52,17 +52,13 @@ export default function QuakeList (){
                     return(
                         <Marker key ={quake.id} position={[lat,lon]}>
                             <Popup>
-                                A pretty CSS3 popup. <br /> Easily customizable.
+                                Shock of Magnitude:{quake.properties.mag}
                             </Popup>
                         </Marker>
                     )     
-                })}
-                
-        </MapContainer>
-                
-            </ul>
-            
-            
+                })}         
+        </MapContainer>                 
+            </ul>                        
         </div>
     )
 }
