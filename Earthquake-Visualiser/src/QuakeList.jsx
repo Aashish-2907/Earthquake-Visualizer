@@ -1,5 +1,8 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios"
+import {MapContainer,Marker,TileLayer,Popup} from 'react-leaflet'
+import "leaflet/dist/leaflet.css"
+// import { MapBox } from "./MapBox";
 
 export default function QuakeList (){
     const[quakes,setQuakes]=useState([])
@@ -21,7 +24,8 @@ export default function QuakeList (){
     useEffect (()=>{
      fetchQuakes();   
     },[])
-    const position = [51.505, -0.09]
+
+  
     return(
         <div>
             {/* <h2>Test Earthquake Data:</h2>
@@ -33,6 +37,31 @@ export default function QuakeList (){
                 ))
                 }
             </ul> */}
+
+            {loading && <p>Loading...</p>}
+            {error && <p>{error}</p>}
+            <ul>
+                <MapContainer center={[20, 0]} zoom={2} >
+                <TileLayer
+                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                 />
+
+                 {quakes.map((quake)=>{
+                    const [lon,lat]=quake.geometry.coordinates
+                    return(
+                        <Marker key ={quake.id} position={[lat,lon]}>
+                            <Popup>
+                                A pretty CSS3 popup. <br /> Easily customizable.
+                            </Popup>
+                        </Marker>
+                    )     
+                })}
+                
+        </MapContainer>
+                
+            </ul>
+            
             
         </div>
     )
