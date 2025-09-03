@@ -7,13 +7,28 @@ HTTP Requests: Axios
 Map Visualization: Leaflet.js
 Styling: Tailwind CSS
 Build Tool: Vite
+
 🌐 Features
 Fetches real-time earthquake data from USGS.
 Displays earthquake locations on an interactive map.
 Each earthquake marker shows magnitude and location.
 Responsive UI built with Tailwind CSS.
+
 📁 Project Structure
-Earthquake-Visualiser/ │ ├── node_modules/ ├── public/ ├── src/ │ ├── components/ # React components │ ├── App.jsx # Main app component │ ├── main.jsx # Entry point │ └── index.css # Tailwind CSS styles ├── package.json ├── package-lock.json ├── vite.config.js └── README.md
+
+Earthquake-Visualiser/
+│
+├── node_modules/
+├── public/
+├── src/
+│ ├── components/ # React components
+│ ├── App.jsx # Main app component
+│ ├── main.jsx # Entry point
+│ └── index.css # Tailwind CSS styles
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
 
 🚀 Installation
 Clone the repository:
