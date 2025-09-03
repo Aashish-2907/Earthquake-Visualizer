@@ -1,12 +1,92 @@
-# React + Vite
+# Earthquake-Visualiser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application to visualize real-time earthquake data on a map. The project fetches earthquake data from the [USGS Earthquake API](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson) and displays it interactively using Leaflet.js.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React
+- **HTTP Requests:** Axios
+- **Map Visualization:** Leaflet.js
+- **Styling:** Tailwind CSS
+- **Build Tool:** Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🌐 Features
+
+- Fetches real-time earthquake data from USGS.
+- Displays earthquake locations on an interactive map.
+- Each earthquake marker shows magnitude and location.
+- Responsive UI built with Tailwind CSS.
+
+---
+
+## 📁 Project Structure
+
+Earthquake-Visualiser/
+│
+├── node_modules/
+├── public/
+├── src/
+│ ├── components/ # React components
+│ ├── App.jsx # Main app component
+│ ├── main.jsx # Entry point
+│ └── index.css # Tailwind CSS styles
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+
+
+---
+
+## 🚀 Installation
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-url>
+cd Earthquake-Visualiser
+
+2. Install dependencies:
+
+npm install
+
+🏃‍♂️ Running Locally
+
+Start the development server:
+
+npm run dev
+
+
+Open your browser and navigate to the URL provided in the terminal (usually http://localhost:5173).
+
+⚡ Build for Production
+
+To create a production build:
+
+npm run build
+
+
+Preview the production build locally:
+
+npm run preview
+
+📌 Usage
+
+Open the application in your browser.
+
+Explore the interactive map showing earthquake locations.
+
+Click on markers to see details like magnitude and location.
+
+📜 API Reference
+
+USGS Earthquake API:
+https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson
+
+💻 License
+
+This project is licensed under the MIT License.
